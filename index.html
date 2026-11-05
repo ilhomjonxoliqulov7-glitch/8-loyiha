@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💰 Xarajatlar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>💰 Xarajatlar Hisoblagichi</h1>
+      <div class="balance">
+        <span class="label">Balans</span>
+        <span class="amount" id="balance">0 so'm</span>
+      </div>
+    </header>
+
+    <section class="summary">
+      <div class="card income">
+        <div class="card-label">Daromad</div>
+        <div class="card-value" id="income">+0</div>
+      </div>
+      <div class="card expense">
+        <div class="card-label">Xarajat</div>
+        <div class="card-value" id="expense">-0</div>
+      </div>
+    </section>
+
+    <form class="form" id="form">
+      <input type="text" id="desc" placeholder="Tavsif (masalan: tushlik)" required>
+      <input type="number" id="amount" placeholder="Summa" min="1" step="0.01" required>
+      <select id="type">
+        <option value="expense">Xarajat</option>
+        <option value="income">Daromad</option>
+      </select>
+      <button type="submit">Qo'shish</button>
+    </form>
+
+    <section class="list-section">
+      <h2>Tranzaksiyalar</h2>
+      <ul class="list" id="list"></ul>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
